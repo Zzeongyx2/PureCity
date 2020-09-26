@@ -26,6 +26,8 @@ public class GameActivity extends Activity  {
     private int percentage = 0;
     private int level = 1;
 
+    Handler handler = new Handler();
+
     private Button B1, B2, B3, B4, B5, B6;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,21 +160,57 @@ public class GameActivity extends Activity  {
             case 0:
                 B1.setVisibility(View.VISIBLE);
                 B1.setText(message);
+                handler.postDelayed(new Runnable(){
+                @Override
+                public void run(){
+                    B1.setVisibility(View.INVISIBLE);
+                }
+            }, 3000);
             case 1:
                 B2.setVisibility(View.VISIBLE);
                 B2.setText(message);
+                handler.postDelayed(new Runnable(){
+                    @Override
+                    public void run(){
+                        B2.setVisibility(View.INVISIBLE);
+                    }
+                }, 3000);
             case 2:
                 B3.setVisibility(View.VISIBLE);
                 B3.setText(message);
+                handler.postDelayed(new Runnable(){
+                    @Override
+                    public void run(){
+                        B3.setVisibility(View.INVISIBLE);
+                    }
+                }, 3000);
             case 3:
                 B4.setVisibility(View.VISIBLE);
                 B4.setText(message);
+                handler.postDelayed(new Runnable(){
+                    @Override
+                    public void run(){
+                        B4.setVisibility(View.INVISIBLE);
+                    }
+                }, 3000);
             case 4:
                 B5.setVisibility(View.VISIBLE);
                 B5.setText(message);
+                handler.postDelayed(new Runnable(){
+                    @Override
+                    public void run(){
+                        B5.setVisibility(View.INVISIBLE);
+                    }
+                }, 3000);
             case 5:
                 B6.setVisibility(View.VISIBLE);
                 B6.setText(message);
+                handler.postDelayed(new Runnable(){
+                    @Override
+                    public void run(){
+                        B6.setVisibility(View.INVISIBLE);
+                    }
+                }, 3000);
             default:
                 break;
         }
@@ -182,28 +220,28 @@ public class GameActivity extends Activity  {
         final int eventRun = (int) (Math.random() * 100)+1;
         Log.d("=================random", String.valueOf(eventRun));
         if (random == 0) {
-            if (eventRun < 50) {
+            if (eventRun < 100) {
                 return "마스크";
             } else {
                 return null;
             }
 
         } else if (random == 1) {
-            if (eventRun < 70) {
+            if (eventRun < 100) {
                 return "손소독";
             } else {
                 return null;
             }
 
         } else if (random == 2) {
-            if (eventRun < 70) {
+            if (eventRun < 100) {
                 return "체온";
             } else {
                 return null;
             }
 
         } else if (random == 3) {
-            if (eventRun < 50) {
+            if (eventRun < 100) {
                 return "모임 해산";
             } else {
                 return null;
