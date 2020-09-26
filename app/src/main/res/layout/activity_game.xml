@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,28 +7,38 @@
     android:paddingRight="18dp"
     android:background="@drawable/back">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <ProgressBar
         android:max="100"
         android:progress="0"
         android:id="@+id/progressBar"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_gravity="bottom"
+        android:layout_marginTop="320dp"
         android:progressDrawable="@drawable/procrssbar"
-        android:layout_marginBottom="15dp"
         android:layout_width="match_parent"
-        android:layout_height="12dp" />
+        android:layout_height="12dp"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/B1"
-        android:layout_width="30pt"
-        android:layout_height="30pt"
-        android:layout_gravity="center"
-        android:background="@drawable/say"
-        android:textColor="#444455"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="30dp">
 
-    <Button
+        <Button
+            android:id="@+id/B1"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_gravity="center"
+            android:background="@drawable/say"
+            android:textColor="#444455"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <Button
             android:id="@+id/B2"
             android:layout_width="30pt"
             android:layout_height="30pt"
@@ -36,9 +46,10 @@
             android:background="@drawable/say"
             android:textColor="#444455"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="invisible" />
 
-    <Button
+        <Button
             android:id="@+id/B3"
             android:layout_width="30pt"
             android:layout_height="30pt"
@@ -46,19 +57,21 @@
             android:background="@drawable/say"
             android:textColor="#444455"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="invisible" />
 
-    <Button
-        android:id="@+id/B4"
-        android:layout_width="30pt"
-        android:layout_height="30pt"
-        android:layout_gravity="center"
-        android:background="@drawable/say"
-        android:textColor="#444455"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        <Button
+            android:id="@+id/B4"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_gravity="center"
+            android:background="@drawable/say"
+            android:textColor="#444455"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
 
-    <Button
+        <Button
             android:id="@+id/B5"
             android:layout_width="30pt"
             android:layout_height="30pt"
@@ -66,38 +79,32 @@
             android:background="@drawable/say"
             android:textColor="#444455"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="invisible" />
 
-    <Button
-        android:id="@+id/B6"
-        android:layout_width="30pt"
-        android:layout_height="30pt"
-        android:layout_gravity="center"
-        android:background="@drawable/say"
-        android:textColor="#444455"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        <Button
+            android:id="@+id/B6"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_gravity="center"
+            android:background="@drawable/say"
+            android:textColor="#444455"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
 
-    <Button
-        android:id="@+id/H1"
-        android:layout_width="30pt"
-        android:layout_height="30pt"
-        android:layout_gravity="center"
-        android:background="@drawable/say"
-        android:textColor="#444455"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        <Button
+            android:id="@+id/H1"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_gravity="center"
+            android:background="@drawable/say"
+            android:textColor="#444455"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
 
-    <ImageView
-        android:id="@+id/noitem"
-        android:layout_width="20pt"
-        android:layout_height="20pt"
-        android:layout_gravity="center_vertical"
-        android:background="@drawable/noitem"
-        android:textColor="#444455"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+    </LinearLayout>
 
 
-
-</LinearLayout>
+</RelativeLayout>

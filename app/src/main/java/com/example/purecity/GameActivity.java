@@ -113,10 +113,44 @@ public class GameActivity extends Activity  {
             @Override
             public void onClick(View v) {
                 B1.setVisibility(View.INVISIBLE);
+                percentage--;
             }
         });
-
-
+        B2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                B2.setVisibility(View.INVISIBLE);
+                percentage--;
+            }
+        });
+        B3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                B3.setVisibility(View.INVISIBLE);
+                percentage--;
+            }
+        });
+        B4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                B4.setVisibility(View.INVISIBLE);
+                percentage--;
+            }
+        });
+        B5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                B5.setVisibility(View.INVISIBLE);
+                percentage--;
+            }
+        });
+        B6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                B6.setVisibility(View.INVISIBLE);
+                percentage--;
+            }
+        });
     }
 
     private void personNumber(int num, String message){
@@ -155,21 +189,21 @@ public class GameActivity extends Activity  {
             }
 
         } else if (random == 1) {
-            if (eventRun < 50) {
+            if (eventRun < 70) {
                 return "손소독";
             } else {
                 return null;
             }
 
         } else if (random == 2) {
-            if (eventRun < 30) {
+            if (eventRun < 70) {
                 return "체온";
             } else {
                 return null;
             }
 
         } else if (random == 3) {
-            if (eventRun < 10) {
+            if (eventRun < 50) {
                 return "모임 해산";
             } else {
                 return null;
