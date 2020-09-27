@@ -17,7 +17,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
-public class GameActivity extends Activity  {
+public class GameActivity2 extends Activity  {
     private CountDownTimer percentCountDownTimer;
     private CountDownTimer randomCountDownTimer;
 
@@ -61,9 +61,9 @@ public class GameActivity extends Activity  {
             @Override
             public void onTick(long l) {
                 //Log.d("GameActivity", "----- onTick -----");
-                percentage++;
+                percentage+=2;
                 progressBar.setProgress(percentage);
-                if(percentage == 22){
+                if(percentage == 24){
                     int random_big = (int) (Math.random()*4);
                     switch(random_big){
                         case 0:
@@ -112,8 +112,6 @@ public class GameActivity extends Activity  {
                     }
                 }
             }
-
-
 
             @Override
             public void onFinish() {
@@ -213,14 +211,15 @@ public class GameActivity extends Activity  {
         });
     }
 
+
     private void checkGameState(int percentage){
         if(percentage >= 100){
-            Intent intent = new Intent(GameActivity.this, GameOverActivity.class);
+            Intent intent = new Intent(GameActivity2.this, GameOverActivity.class);
             startActivity(intent);
             finish();
         }
         if(percentage <= 0){
-            Intent intent = new Intent(GameActivity.this, Stage1Activity.class);
+            Intent intent = new Intent(GameActivity2.this, Stage2Activity.class);
             startActivity(intent);
             finish();
         }
@@ -240,11 +239,11 @@ public class GameActivity extends Activity  {
                     B1.setBackgroundResource(R.drawable.people);
                 }
                 handler.postDelayed(new Runnable(){
-                @Override
-                public void run(){
-                    B1.setVisibility(View.INVISIBLE);
-                }
-            }, 5000);
+                    @Override
+                    public void run(){
+                        B1.setVisibility(View.INVISIBLE);
+                    }
+                }, 5000);
             case 1:
                 B2.setVisibility(View.VISIBLE);
                 if(message == "마스크"){
